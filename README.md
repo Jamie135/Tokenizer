@@ -1,3 +1,61 @@
 # Tokenizer: 42Berry
 
-This project consists of creating a token named 42Berry, inspired by the undiscovered Captain John's treasure from One Piece.
+This project consists of creating and deploying a personal token named 42Berry with Web 3.0, the new evolution of the internet (Web 2.0).
+Web 3.0 aims to create a more intelligent, connected, and open web experience by leveraging technologies such as blockchain, decentralized networks, and smart contracts. Unlike its predecessors, Web 3.0 focuses on decentralization, user privacy, and data ownership, allowing users to interact directly with each other without the need for intermediaries. 
+This new paradigm promises to enhance security, transparency, and trust in online interactions, paving the way for innovative applications and services.
+
+
+## Blockchain Platform: Ethereum
+
+Ethereum is one of the most widely used and versatile blockchain platforms available today. Here are some reasons why you should consider using Ethereum for your blockchain projects:
+
+1. **Smart Contract**: Ethereum was the first blockchain to introduce smart contracts, which are self-executing contracts with the terms directly written into code. This allows for the creation of decentralized applications (dApps) that can operate without intermediaries.
+
+2. **Large Developer Community**: Ethereum has a vast and active developer community, providing extensive resources, tools, and support.
+
+3. **Security and Reliability**: Ethereum's blockchain is highly secure and has been extensively tested. Its decentralized nature ensures that it is resistant to censorship.
+
+4. **Interoperability**: Ethereum supports various standards like ERC-20 and ERC-721, which facilitate the creation and exchange of tokens and assets. This allows for seamless integration with other projects and platforms.
+
+5. **Wide Adoption**: Ethereum is widely adopted by enterprises, developers, and users, making it a trusted and established platform for deploying blockchain applications.
+
+
+## Standards: ERC-20
+
+ERC-20 is one of the most used fungible token standards on the Ethereum blockchain. 
+
+1. **Interoperability**: ERC-20 tokens are compatible with a wide range of wallets, exchanges, and dApps. This ensures that your token can be easily integrated and used across various platforms within the Ethereum ecosystem.
+
+2. **Standardization**: ERC-20 provides a standardized set of rules for token creation and management. This simplifies the development process and ensures that all ERC-20 tokens behave in a predictable manner.
+
+3. **Security**: The ERC-20 standard has been extensively tested, making it a secure choice for token development. Its well-defined rules help prevent common vulnerabilities and ensure the integrity of your token.
+
+4. **Flexibility**: ERC-20 tokens can represent a wide range of assets and use cases, from utility tokens to stablecoins. This flexibility allows you to tailor your token to meet specific needs and objectives.
+
+
+## Wallet: MetaMask
+
+MetaMask is a popular choice for managing digital assets and interacting with decentralized applications on Web 3.0 ecosystem. Here are some reasons why you should consider using MetaMask:
+
+1. **User-Friendly Interface**: MetaMask offers an intuitive and easy-to-use interface, making it accessible for both beginners and experienced users.
+
+2. **Security**: MetaMask provides robust security features, including password protection, seed phrase backup, and encryption, ensuring that your assets are safe.
+
+3. **Decentralized Access**: As a non-custodial wallet, MetaMask gives you full control over your private keys and funds, without relying on third-party services.
+
+4. **Compatibility**: MetaMask is compatible with a wide range of dApps and supports multiple blockchains, including Ethereum and Binance Smart Chain, allowing you to interact seamlessly with various decentralized services.
+
+5. **Browser Extension and Mobile App**: MetaMask is available as a browser extension for Chrome, Firefox, and other browsers, as well as a mobile app for iOS and Android, providing flexibility and convenience.
+
+
+## Testnet: Sepolia
+
+Sepolia is a testnet for Ethereum allowing developers to test their smart contracts and decentralized applications (dApps) before deploying them on the mainnet.
+
+1. **Cost-Effective**: Transactions on Sepolia do not require real Ether (ETH), this makes it an economical choice for development and testing.
+
+2. **Faucet Availability**: Sepolia offers faucets that provide free test ETH, making it easy to obtain the necessary tokens for testing your applications.
+
+3. **Network Stability**: Sepolia is designed to be a stable and reliable testnet, ensuring that you can conduct your testing without interruptions or unexpected behavior.
+
+4. **Similar to Mainnet**: Sepolia closely mirrors the Ethereum mainnet in terms of functionality and behavior. This ensures that your tests are representative of how your application will perform on the mainnet.
