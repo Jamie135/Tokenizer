@@ -2,16 +2,18 @@
 
 This guide provides instructions on how to deploy and interact with the smart contract using Remix IDE and MetaMask.
 
-## Requirements
+## Contract Address
+```
+4242424242424242424242424242424242424242
+```
 
+## Required Setups
 - [Remix IDE](https://remix.ethereum.org/)
 - [MetaMask Wallet](https://metamask.io/)
-- [Etherscan Page of the Contract](https://sepolia.etherscan.io/address/0xe3996f4e094471342ae1ef51f59f01b898c709da)
-- **Contract Address:** `0xE3996F4E094471342AE1EF51F59F01b898C709da`
 
 ---
 
-## Deployment of the 42DK Contract (First Time)
+## Deployment
 
 Follow these steps to deploy the contract for the first time:
 
@@ -19,16 +21,16 @@ Follow these steps to deploy the contract for the first time:
    - Navigate to [Remix IDE](https://remix.ethereum.org/) in your browser.
 
 2. **Create a New File:**
-   - In the file explorer, create a new file named `42DK.sol`.
+   - In the file explorer, create a new file named `42Berry.sol`.
 
 3. **Paste Contract Code:**
-   - Copy the contract code from the `42DK.sol` file located in the `contracts` folder of this repository.
-   - Paste it into the `42DK.sol` file in the Remix IDE.
+   - Copy the contract code from the `42Berry.sol` file located in the `contracts` folder of this repository.
+   - Paste it into the `42Berry.sol` file in the Remix IDE.
 
 4. **Compile the Contract:**
    - Click on the `Solidity Compiler` tab on the left sidebar.
    - Choose the appropriate compiler version if necessary.
-   - Click `Compile 42DK.sol`.
+   - Click `Compile 42Berry.sol`.
 
 5. **Deploy the Contract:**
    - Navigate to the `Deploy & run transactions` tab.
@@ -43,21 +45,21 @@ Follow these steps to deploy the contract for the first time:
 
 ---
 
-## Interacting with an Already Deployed Contract
+## Interaction
 
-If the contract is already deployed (e.g., using address `0xE3996F4E094471342AE1EF51F59F01b898C709da`), follow these steps:
+For already deployed contracts, follow these steps:
 
 1. **Open Remix IDE:**
    - Go to [Remix IDE](https://remix.ethereum.org/).
 
 2. **Compile the Contract:**
-   - In the `Solidity Compiler` tab, compile the `42DK.sol` contract again.
+   - In the `Solidity Compiler` tab, compile the `42Berry.sol` contract again.
 
 3. **Connect MetaMask:**
    - In the `Deploy & run transactions` tab, select `Injected Provider - MetaMask` to connect your wallet.
 
 4. **Access the Deployed Contract:**
-   - In the `At Address` field, enter the contract address `0xE3996F4E094471342AE1EF51F59F01b898C709da`.
+   - In the `At Address` field, enter the contract address `...`.
    - Click the `At Address` button to load the contract.
 
 5. **Interact with the Contract:**
@@ -66,11 +68,8 @@ If the contract is already deployed (e.g., using address `0xE3996F4E094471342AE1
 ---
 
 ## Additional Resources
-
-- **Remix IDE Documentation:** [https://remix-ide.readthedocs.io/](https://remix-ide.readthedocs.io/)
-- **MetaMask Setup Guide:** [https://metamask.io/](https://metamask.io/)
 - **Contract Etherscan Page:** [https://sepolia.etherscan.io/address/0xe3996f4e094471342ae1ef51f59f01b898c709da](https://sepolia.etherscan.io/address/0xe3996f4e094471342ae1ef51f59f01b898c709da)
 
 ---
 
-By following these instructions, you can successfully deploy or interact with the 42DK contract using Remix IDE and MetaMask.
+By following these instructions, you can successfully deploy or interact with the 42Berry contract using Remix IDE and MetaMask.
