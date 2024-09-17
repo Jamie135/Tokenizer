@@ -59,7 +59,7 @@ For already deployed contracts, follow these steps:
    - In the `Deploy & run transactions` tab, select `Injected Provider - MetaMask` to connect your wallet.
 
 4. **Access the Deployed Contract:**
-   - In the `At Address` field, enter the contract address `...`.
+   - In the `At Address` field, enter the contract address `4242424242424242424242424242424242424242`.
    - Click the `At Address` button to load the contract.
 
 5. **Interact with the Contract:**
