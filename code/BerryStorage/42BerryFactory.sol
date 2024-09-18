@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.24;
 
-import "./42Berry.sol";
+import "./42BerryStorage.sol";
 
 contract BerryFactory {
 
