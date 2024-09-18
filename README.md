@@ -1,8 +1,6 @@
 # Tokenizer: 42Berry
 
-This project consists of creating and deploying a personal token named 42Berry with Web 3.0, a decentralized network that characterizes the evolution of the internet (Web 2.0).
-Unlike its predecessors, Web 3.0 focuses on user's privacy and data ownership with the technologies of blockchain and smart contract, allowing users to interact directly with each other without the need for intermediaries. 
-This new paradigm promises to enhance security, transparency, and trust in online interactions, paving the way for innovative applications and services.
+This project involves creating and deploying a personal token called 42Berry using Web 3.0, a decentralized network that represents the next phase of the internet (Web 2.0). Unlike  its predecessors, Web 3.0 prioritizes user privacy and data ownership through blockchain and smart contracts, enabling direct interactions without middlemen. This approach aims to improve security, transparency, and trust in online activities, opening doors for new applications and services.
 
 
 ## Blockchain Platform: Ethereum
