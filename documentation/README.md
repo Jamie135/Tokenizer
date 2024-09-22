@@ -77,4 +77,4 @@ This function unpauses the contract, resuming all token transfers and other paus
 unpause()
 ```
 
-More information about other functions from OpenZeppelin library: [OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20)
+More information about other functions from [OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20) library.

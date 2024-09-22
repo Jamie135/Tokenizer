@@ -71,4 +71,4 @@ For already deployed contracts, follow these steps:
 
 - [Contract Etherscan](https://sepolia.etherscan.io/address/0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f)
 
-- [Chainlink Faucets](https://faucets.chain.link/sepolia)
+- [Chainlink Sepolia Faucet](https://faucets.chain.link/sepolia)
