@@ -50,7 +50,7 @@ Follow these steps to deploy the contract for the first time:
 For already deployed contracts, follow these steps:
 
 1. **Open Remix IDE:**
-   - Go to [Remix IDE](https://remix.ethereum.org/).
+   - Navigate to [Remix IDE](https://remix.ethereum.org/) in your browser.
 
 2. **Compile the Contract:**
    - In the `Solidity Compiler` tab, compile the `42Berry.sol` contract again.
