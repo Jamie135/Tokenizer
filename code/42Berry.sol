@@ -6,8 +6,8 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
-// Define a new contract called `BerryToken`, which inherits from ERC20, Ownable, and Pausable
-contract BerryToken is ERC20, Ownable, Pausable {
+// Define a new contract called `WorldGovt`, which inherits from ERC20, Ownable, and Pausable
+contract WorldGovt is ERC20, Ownable, Pausable {
 
     // Constructor that initializes the token with the name "42Berry" and symbol "42B"
     // It also sets the passed address to be the owner of the contract using Ownable

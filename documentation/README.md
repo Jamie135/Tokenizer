@@ -25,10 +25,10 @@ The contract uses OpenZeppelin libraries to ensure security, reliability, and si
 The contract's constructor initializes the ERC20 token with:
 - **Name**: "42Berry"
 - **Symbol**: "42B"
-- The contract owner is set during deployment using the `Ownable(owner)` mechanism, which restricts certain actions to the owner's address.
+- The contract owner is set during deployment using the `Ownable`, which restricts certain actions to the owner's address.
 
 ```solidity
-constructor(address owner)
+constructor(0xAddressOwner)
     ERC20("42Berry", "42B")
     Ownable(owner)
 {}

@@ -21,7 +21,7 @@ Smart contracts are self-executing contracts with the terms of the agreement dir
 
 ### Blockchain
 
-Blockchain is a type of distributed ledger technology (DLT) designed to record, store, and transmit data securely across a decentralized network. It removes the need for a central authority by allowing participants (nodes) to manage and verify data collectively. The data is stored in “blocks” that are linked together in a chronological order, forming a continuous “chain,” which makes the entire system resistant to modification and tampering.
+Blockchain is a type of distributed database designed to record, store, and transmit data securely across a decentralized network. It removes the need for a central authority by allowing participants (nodes) to manage and verify data collectively. The data is stored in “blocks” that are linked together in a chronological order, forming a continuous “chain,” which makes the entire system resistant to modification and tampering.
 
 #### How does it work
 

@@ -68,8 +68,7 @@ For already deployed contracts, follow these steps:
 ---
 
 ## Additional Resources
-- **Contract Etherscan Page:** [42Berry Etherscan](https://etherscan.io/address/0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f)
 
----
+- [Contract Etherscan](https://sepolia.etherscan.io/address/0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f)
 
-By following these instructions, you can successfully deploy or interact with the 42Berry contract using Remix IDE and MetaMask.
+- [Chainlink Faucets](https://faucets.chain.link/sepolia)
