@@ -48,8 +48,20 @@ mint(0xAddress, amount)
 ```
 
 **Parameters**:
-- **to**: The address that will receive the newly minted tokens.
+- **account**: The address that will receive the newly minted tokens.
 - **amount**: The number of tokens to be created. The function multiplies this by 10^18 to account for the token's 18 decimal places.
+
+#### Burn
+
+This function allows the contract owner to burn (destroy) a specified amount of tokens from a specified address. Only the owner can burn tokens due to the owner modifier.
+
+```solidity
+burn(0xAddress, amount)
+```
+
+**Parameters**:
+- **account**: The address from which the tokens will be burned.
+- **amount**: The number of tokens to be burned. The function multiplies this by 10^18 to account for the token's 18 decimal places.
 
 #### Pause
 
@@ -68,43 +80,4 @@ This function unpauses the contract, resuming all token transfers and other paus
 unpause()
 ```
 
-#### Freeze
-
-This function allows the owner to freeze a specific account, preventing it from sending or receiving tokens. A frozen account is essentially locked from making any transactions involving the token.
-
-**Parameters**:
-- **account**: The address of the account that will be frozen.
-
-```solidity
-freezeAccount(0xAddress)
-```
-
-#### Unfreeze
-
-This function allows the owner to unfreeze a previously frozen account, enabling it to resume token transfers.
-
-**Parameters**:
-- **account**: The address of the account that will be unfrozen.
-
-```solidity
-unfreezeAccount(0xAddress)
-```
-
-#### Check
-
-This is an internal function that is overridden to add additional checks before any token transfer takes place. It ensures:
-- The contract is not paused (whenNotPaused).
-- Neither the sender (from) nor the receiver (to) has a frozen account.
-
-**Parameters**:
-- **from**: The address sending the tokens.
-- **to**: The address receiving the tokens.
-- **amount**: The amount of tokens being transferred.
-
-```solidity
-_checkTransfer(0xSender, 0xReciever, amount)
-```
-
-If any of these conditions are violated, the transaction will revert with an error message:
-- Error when paused: The contract will throw an error if it is in a paused state.
-- Error for frozen accounts: The contract will throw an error if either the sender's or receiver's account is frozen.
+More information about other functions from OpenZeppelin library: [OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20)

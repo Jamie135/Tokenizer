@@ -4,7 +4,7 @@ This guide provides instructions on how to deploy and interact with the smart co
 
 ## Contract Address
 ```
-4242424242424242424242424242424242424242
+0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f
 ```
 
 ## Required Setups
@@ -59,7 +59,7 @@ For already deployed contracts, follow these steps:
    - In the `Deploy & run transactions` tab, select `Injected Provider - MetaMask` to connect your wallet.
 
 4. **Access the Deployed Contract:**
-   - In the `At Address` field, enter the contract address `4242424242424242424242424242424242424242`.
+   - In the `At Address` field, enter the contract address `0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f`.
    - Click the `At Address` button to load the contract.
 
 5. **Interact with the Contract:**
@@ -68,7 +68,7 @@ For already deployed contracts, follow these steps:
 ---
 
 ## Additional Resources
-- **Contract Etherscan Page:** 
+- **Contract Etherscan Page:** [42Berry Etherscan](https://etherscan.io/address/0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f)
 
 ---
 
