@@ -63,16 +63,16 @@ contract BerryToken is ERC20, Ownable, Pausable {
     }
 
     /**
-     * @dev Overrides the _beforeTokenTransfer function to include checks for paused state and frozen accounts.
+     * @dev Overrides the _checkTransfer function to include checks for paused state and frozen accounts.
      * This ensures that token transfers are only allowed when the contract is not paused and the accounts are not frozen.
      */
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
+    function _checkTransfer(address from, address to, uint256 amount)
         internal
         whenNotPaused
         override
     {
         require(!_frozenAccounts[from], "ERC20: account is frozen");
         require(!_frozenAccounts[to], "ERC20: account is frozen");
-        super._beforeTokenTransfer(from, to, amount);
+        super._checkTransfer(from, to, amount);
     }
 }
