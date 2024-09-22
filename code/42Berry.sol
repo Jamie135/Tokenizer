@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 contract BerryToken is ERC20, Ownable, Pausable {
 
     // Constructor that initializes the token with the name "42Berry" and symbol "42B"
-    // It also sets the initial owner of the contract using the Ownable contract.
+    // It also sets the passed address to be the owner of the contract using Ownable
     constructor(address initialOwner)
         ERC20("42Berry", "42B")
         Ownable(initialOwner)
