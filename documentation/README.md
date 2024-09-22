@@ -21,6 +21,8 @@ The contract uses OpenZeppelin libraries to ensure security, reliability, and si
 - **Ownable**: Allows for ownership management, restricting certain functions to the owner of the contract.
 - **Pausable**: Adds the ability to pause and unpause the contract, temporarily disabling certain actions (like token transfers).
 
+More information about OpenZeppelin: [OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20)
+
 ### Constructor
 
 The contract's constructor initializes the ERC20 token with:
