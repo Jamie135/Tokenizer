@@ -68,7 +68,7 @@ For already deployed contracts, follow these steps:
 ---
 
 ## Additional Resources
-- **Contract Etherscan Page:** [https://sepolia.etherscan.io/address/0xe3996f4e094471342ae1ef51f59f01b898c709da](https://sepolia.etherscan.io/address/0xe3996f4e094471342ae1ef51f59f01b898c709da)
+- **Contract Etherscan Page:** 
 
 ---
 
