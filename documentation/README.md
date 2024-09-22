@@ -2,14 +2,13 @@
 
 ## Overview
 
-**BerryToken (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. This token includes standard ERC20 features such as minting, transferring, and balance querying, while also offering advanced functionalities like account freezing, contract pausing, and minting new tokens. These features provide additional flexibility and security for managing the token's operations.
+**BerryToken (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. This token includes standard ERC20 features such as minting, transferring, and balance querying, while also offering advanced functionalities like account contract pausing, minting and burning tokens. These features provide additional flexibility and security for managing the token's operations.
 
 ### Key Features
 
 - **Minting:** The contract owner can mint new tokens.
+- **Burning:** The contract owner can burn existing tokens. 
 - **Pausing:** The owner can pause all token transfers.
-- **Account Freezing:** The owner can freeze and unfreeze specific accounts, preventing transfers from or to those addresses.
-- **Security:** Token transfers can be restricted by pausing the contract or freezing specific accounts.
 
 ## Contract Structure
 
