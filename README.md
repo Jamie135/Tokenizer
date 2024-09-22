@@ -7,7 +7,7 @@ This project involves creating and deploying a personal token called 42Berry usi
 ### Cryptocurrency and Cryptography
 
 - Cryptocurrency is a type virtual currency that that relies on cryptography for security. Unlike traditional currencies, cryptocurrencies exist only in digital form and have no physical counterpart.  
-- Cryptography is the process of securing communication and data from unauthorized access, using complex mathematical algorithms for the encryption, makig it almost impossible to decipher.
+- Cryptography is the process of securing communication and data from unauthorized access, using complex mathematical algorithms for the encryption, making it almost impossible to decipher.
 
 ### Token
 
