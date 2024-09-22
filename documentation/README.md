@@ -2,7 +2,7 @@
 
 ## Overview
 
-**42Berry (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. This token includes standard ERC20 features such as minting, transferring, and balance querying, while also offering advanced functionalities like account contract pausing, minting and burning tokens. These features provide additional flexibility and security for managing the token's operations.
+**42Berry (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. This token includes standard ERC20 features such as name, symbol or balance querying, while also offering advanced functionalities like account contract pausing, minting and burning tokens. These features provide additional flexibility and security for managing the token's operations.
 
 ### Key Features
 
@@ -30,7 +30,7 @@ The contract's constructor initializes the ERC20 token with:
 ```solidity
 constructor(0xAddressOwner)
     ERC20("42Berry", "42B")
-    Ownable(owner)
+    Ownable(0xAddressOwner)
 {}
 ```
 
