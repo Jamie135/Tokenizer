@@ -10,18 +10,17 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 contract WorldGovt is ERC20, Ownable, Pausable {
 
     // Constructor that initializes the token with the name "42Berry" and symbol "42B"
-    // It also sets the passed address to be the owner of the contract using Ownable
-    constructor(address initialOwner)
-        ERC20("42Berry", "42B")
-        Ownable(initialOwner)
-    {}
+    // It also sets the sender address to be the owner of the contract using Ownable
+    constructor(uint256 initialSupply) ERC20("42Berry", "42B") Ownable(msg.sender) {
+        _mint(msg.sender, initialSupply * 10 ** decimals());
+    }
 
-    // Function to mint new tokens, only accessible by the owner of the contract
+    // Function to mint new tokens for the targeted address
     function mint(address account, uint256 amount) public onlyOwner {
         _mint(account, amount * 10 ** decimals());
     }
 
-    // Function to burn tokens, only accessible by the owner of the contract
+    // Function to burn tokens of the targeted address
     function burn(address account, uint256 amount) public onlyOwner {
         _burn(account, amount * 10 ** decimals());
     }

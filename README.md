@@ -46,11 +46,9 @@ MetaMask is a popular choice for managing digital assets and interacting with de
 
 2. **Security**: MetaMask provides robust security features, including password protection, seed phrase backup, and encryption, ensuring that your assets are safe.
 
-3. **Decentralized Access**: As a non-custodial wallet, MetaMask gives you full control over your private keys and funds, without relying on third-party services.
+3. **Compatibility**: MetaMask is compatible with a wide range of dApps and supports multiple blockchains, including Ethereum and Binance Smart Chain, allowing you to interact seamlessly with various decentralized services.
 
-4. **Compatibility**: MetaMask is compatible with a wide range of dApps and supports multiple blockchains, including Ethereum and Binance Smart Chain, allowing you to interact seamlessly with various decentralized services.
-
-5. **Browser Extension and Mobile App**: MetaMask is available as a browser extension for Chrome, Firefox, and other browsers, as well as a mobile app for iOS and Android, providing flexibility and convenience.
+4. **Browser Extension and Mobile App**: MetaMask is available as a browser extension for Chrome, Firefox, and other browsers, as well as a mobile app for iOS and Android, providing flexibility and convenience.
 
 
 ### Testnet: Sepolia

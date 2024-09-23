@@ -62,13 +62,13 @@ The contract uses OpenZeppelin libraries to ensure security, reliability, and si
 The contract's constructor initializes the ERC20 token with:
 - **Name**: "42Berry"
 - **Symbol**: "42B"
-- The contract owner is set during deployment using the `Ownable`, which restricts certain actions to the owner's address.
+- The contract sets the `msg.sender` as the owner during deployment using `Ownable`.
+- The contract also call the `_mint()` method from OpenZeppelin to mint `initialSupply` amount of tokens for the the contract owner
 
 ```solidity
-constructor(0xAddressOwner)
-    ERC20("42Berry", "42B")
-    Ownable(0xAddressOwner)
-{}
+constructor(uint256 initialSupply) ERC20("42Berry", "42B") Ownable(msg.sender) {
+    _mint(msg.sender, initialSupply);
+}
 ```
 
 ### Functions
