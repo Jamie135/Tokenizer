@@ -6,7 +6,9 @@ This project involves creating and deploying a personal token called 42Berry.
 
 ### Blockchain Platform: Ethereum
 
-Ethereum is one of the most widely used and versatile blockchain platforms available today. Here are some reasons why you should consider using Ethereum for your blockchain projects:
+Ethereum is one of the most widely used and versatile blockchain platforms available today.
+
+**Advantages**:
 
 1. **Smart Contract**: Ethereum was the first blockchain to introduce smart contracts, which are self-executing contracts with the terms directly written into code. This allows for the creation of decentralized applications (dApps) that can operate without intermediaries.
 
@@ -21,7 +23,9 @@ Ethereum is one of the most widely used and versatile blockchain platforms avail
 
 ### Standards: ERC-20
 
-ERC-20 is one of the most used fungible token standards on the Ethereum blockchain. 
+ERC-20 is one of the most used fungible token standards on the Ethereum blockchain.
+
+**Advantages**:
 
 1. **Interoperability**: ERC-20 tokens are compatible with a wide range of wallets, exchanges, and dApps. This ensures that your token can be easily integrated and used across various platforms within the Ethereum ecosystem.
 
@@ -34,7 +38,9 @@ ERC-20 is one of the most used fungible token standards on the Ethereum blockcha
 
 ### Wallet: MetaMask
 
-MetaMask is a popular choice for managing digital assets and interacting with decentralized applications on Web 3.0 ecosystem. Here are some reasons why you should consider using MetaMask:
+MetaMask is a popular choice for managing digital assets and interacting with decentralized applications on Web 3.0 ecosystem.
+
+**Advantages**:
 
 1. **User-Friendly Interface**: MetaMask offers an intuitive and easy-to-use interface, making it accessible for both beginners and experienced users.
 
@@ -51,6 +57,8 @@ MetaMask is a popular choice for managing digital assets and interacting with de
 
 Sepolia is a testnet for Ethereum allowing developers to test their smart contracts and decentralized applications (dApps) before deploying them on the mainnet.
 
+**Advantages**:
+
 1. **Cost-Effective**: Transactions on Sepolia do not require real Ether (ETH), this makes it an economical choice for development and testing.
 
 2. **Faucet Availability**: Sepolia offers faucets that provide free test ETH, making it easy to obtain the necessary tokens for testing your applications.
@@ -63,6 +71,8 @@ Sepolia is a testnet for Ethereum allowing developers to test their smart contra
 ### IDE: Remix
 
 Remix is a powerful IDE specifically designed for developing smart contracts on the Ethereum blockchain.
+
+**Advantages**:
 
 1. **Web-Based and Accessible**: Remix is a web-based IDE, which means you can access it from any browser without the need for installation. This makes it highly accessible and convenient for developers.
 
