@@ -39,25 +39,19 @@ Blockchain is a type of distributed database designed to record, store, and tran
 
 ## Contract Overview
 
-**42Berry (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. This token includes standard ERC20 features such as name, symbol or balance querying, while also offering advanced functionalities like account contract pausing, minting and burning tokens. These features provide additional flexibility and security for managing the token's operations.
-
-### Key Features
-
-- **Minting:** The contract owner can mint new tokens.
-- **Burning:** The contract owner can burn existing tokens. 
-- **Pausing:** The owner can pause all token transfers.
+**42Berry (42B)** is an ERC20-compliant token built on the Ethereum blockchain using OpenZeppelin libraries. 
+This token represents a bounty system inspired by the anime One Piece, offering some basic operations such as bounty increase, bounty decrease and bounty transfering. We will consider that the value of one 42B token is equal to one million berries from the One Piece verse.
 
 ## Contract Structure
 
-### Imports
+### Imports:
 
 The contract uses OpenZeppelin libraries to ensure security, reliability, and simplicity:
 
 - **ERC20**: Provides the standard ERC20 functionality for fungible tokens.
 - **Ownable**: Allows for ownership management, restricting certain functions to the owner of the contract.
-- **Pausable**: Adds the ability to pause and unpause the contract, temporarily disabling certain actions (like token transfers).
 
-### Constructor
+### Constructor:
 
 The contract's constructor initializes the ERC20 token with:
 - **Name**: "42Berry"
@@ -66,52 +60,89 @@ The contract's constructor initializes the ERC20 token with:
 - The contract also call the `_mint()` method from OpenZeppelin to mint `initialSupply` amount of tokens for the the contract owner
 
 ```solidity
-constructor(uint256 initialSupply) ERC20("42Berry", "42B") Ownable(msg.sender) {
-    _mint(msg.sender, initialSupply);
+uint256 initialSupply = 1000000;
+
+constructor() ERC20("42Berry", "42B") Ownable(msg.sender) {
+    _mint(msg.sender, initialSupply * 10 ** decimals());
 }
 ```
 
-### Functions
+### Functions:
 
-#### Mint
+#### increaseBounty
 
-This function allows the contract owner to mint (create) new tokens and assign them to a specified address. Only the owner can mint tokens due to the owner modifier.
+This function allows the contract owner to increase (mint) new tokens and assign them to a specified address.
+The amount of minted tokens will depends on the target's rank and tier.
 
 ```solidity
-mint(0xAddress, amount)
+function increaseBounty(address account, string memory rank, uint256 tier) public onlyOwner {
+    require(account != owner(), "Cannot increase bounty for the owner");
+    require(tier >= 1 && tier <= 5, "Invalid tier");
+
+    uint256 amount = calculateAmount(rank, tier);
+    require(balanceOf(account) + amount * 10 ** decimals() <= 5000 * 10 ** decimals(), "Account bounty too high");
+    _mint(account, amount * 10 ** decimals());
+}
 ```
 
-**Parameters**:
-- **account**: The address that will receive the newly minted tokens.
-- **amount**: The number of tokens to be created. The function multiplies this by 10^18 to account for the token's 18 decimal places.
+#### decreaseBounty
 
-#### Burn
-
-This function allows the contract owner to burn (destroy) a specified amount of tokens from a specified address. Only the owner can burn tokens due to the owner modifier.
+This function allows the contract owner to decrease (burn) a specified amount of tokens from a specified address.
+The amount of burned tokens will depends on the target's rank and tier.
 
 ```solidity
-burn(0xAddress, amount)
+function decreaseBounty(address account, string memory rank, uint256 tier) public onlyOwner {
+    require(account != owner(), "Cannot decrease bounty for the owner");
+    require(tier >= 1 && tier <= 5, "Invalid tier");
+
+    uint256 amount = calculateAmount(rank, tier);
+    require(balanceOf(account) >= amount * 10 ** decimals(), "Account bounty too low");
+    _burn(account, amount * 10 ** decimals());
+}
 ```
 
-**Parameters**:
-- **account**: The address from which the tokens will be burned.
-- **amount**: The number of tokens to be burned. The function multiplies this by 10^18 to account for the token's 18 decimal places.
+#### claimBounty
 
-#### Pause
-
-This function allows the contract owner to pause the contract, which stops all token transfers. When the contract is paused, no tokens can be transferred or minted, which
-can be useful in case of security breach or if an issue is identified.
+This function allows the contract owner to transfer tokens from his account to the bounty claimer.
 
 ```solidity
-pause()
+function claimBounty(address claimer, address captured) public onlyOwner {
+    require(claimer != owner() && captured != owner(), "The owner cannot claim or be captured");
+    require(totalSupply() >= balanceOf(captured), "Insufficient total supply");
+
+    _transfer(msg.sender, claimer, balanceOf(captured));
+    _burn(captured, balanceOf(captured));
+}
 ```
 
-#### Unpause
+#### negotiateHostage
 
-This function unpauses the contract, resuming all token transfers and other paused functions. After calling this function, the contract exits the paused state, and normal operations can continue.
+This function allows the contract owner to get repaid his claimed tokens plus additional 100
 
 ```solidity
-unpause()
+function negotiateHostage() public onlyOwner {
+    uint256 currentSupply = initialSupply * 10 ** decimals();
+    require(currentSupply > balanceOf(msg.sender), "No bounty has been claimed yet!");
+    uint256 amount = currentSupply - balanceOf(msg.sender) + (100 * 10 ** decimals());
+    _mint(msg.sender, amount);
+    initialSupply = balanceOf(msg.sender) / (10 ** decimals());
+}
+```
+
+#### calculateAmount
+
+This function calculates the amount of token based on the rank and the tier of the target.
+
+```solidity
+function calculateAmount(string memory rank, uint256 tier) internal pure returns (uint256) {
+    uint256 baseAmount = 0;
+    if (keccak256(abi.encodePacked(rank)) == keccak256(abi.encodePacked("star"))) {
+        baseAmount = 100;
+    } else if (keccak256(abi.encodePacked(rank)) == keccak256(abi.encodePacked("crown"))) {
+        baseAmount = 1000;
+    }
+    return baseAmount * tier;
+}
 ```
 
 ---
