@@ -145,6 +145,20 @@ function calculateAmount(string memory rank, uint256 tier) internal pure returns
 }
 ```
 
+### ERC20 Standard Functions 
+- approve: Allows owner to approve another address to spend tokens on their behalf.
+- renounceOwner: Renounce ownership.
+- transfer: Allows owner to transfer tokens to other addresses.
+- transferFrom: Allows approved addresses to transfer tokens on behalf of token holders.
+-tranferOwnership: Transfer the ownership to another address.
+- allowance: Returns the amount of tokens that an address is allowed to spend on behalf of another address.
+- balanceOf: Returns the token balance of a specific address.
+- decimals: Returns the number of decimal places used for the token.
+- name: Returns the name of the token.
+- owner: Returns the owner address.
+- symbol: Returns the symbol of the token.
+- totalSupply: Returns the total supply of the token.
+
 ---
 
 ## Additional Resources

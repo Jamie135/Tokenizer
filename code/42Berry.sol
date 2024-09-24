@@ -27,7 +27,7 @@ contract CrossGuild is ERC20, Ownable {
         _mint(account, amount * 10 ** decimals());
     }
 
-    // Function to decrease tokens for the targeted address
+    // Function to burn tokens for the targeted address
     function decreaseBounty(address account, string memory rank, uint256 tier) public onlyOwner {
         require(account != owner(), "Cannot decrease bounty for the owner");
         require(tier >= 1 && tier <= 5, "Invalid tier");
