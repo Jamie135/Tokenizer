@@ -90,7 +90,7 @@ Remix is a powerful IDE specifically designed for developing smart contracts on 
 
 - [OpenZeppelin Library](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20)
 
-## Sepolia Faucets :3
+## Sepolia Faucets
 
 - [Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
