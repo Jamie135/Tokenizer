@@ -118,7 +118,8 @@ function decreaseBounty(address account, Rank rank, uint256 tier) public onlyOwn
 
 #### claimBounty
 
-This function allows the contract owner to transfer tokens from his account to the bounty claimer.
+This function allows the contract owner to transfer tokens from his account to the bounty claimer, the amount of tokens transfered will be based on the bounty (balance) of the captured address.
+After the transfer, all tokens from the captured address will be burnt.
 
 ```solidity
 function claimBounty(address claimer, address captured) public onlyOwner {
@@ -134,7 +135,7 @@ function claimBounty(address claimer, address captured) public onlyOwner {
 
 #### negotiateHostage
 
-This function allows the contract owner to get repaid his claimed tokens plus additional 100
+This function allows the contract owner to redeem all his claimed tokens with an additional 100.
 
 ```solidity
 function negotiateHostage() public onlyOwner {

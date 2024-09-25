@@ -57,13 +57,11 @@ Sepolia is a testnet for Ethereum allowing developers to test their smart contra
 
 **Advantages**:
 
-1. **Cost-Effective**: Transactions on Sepolia do not require real Ether (ETH), this makes it an economical choice for development and testing.
+1. **Faucet Availability**: Sepolia offers faucets that provide free test ETH, making it easy to obtain the necessary tokens for testing your applications.
 
-2. **Faucet Availability**: Sepolia offers faucets that provide free test ETH, making it easy to obtain the necessary tokens for testing your applications.
+2. **Network Stability**: Sepolia is designed to be a stable and reliable testnet, ensuring that you can conduct your testing without interruptions or unexpected behavior.
 
-3. **Network Stability**: Sepolia is designed to be a stable and reliable testnet, ensuring that you can conduct your testing without interruptions or unexpected behavior.
-
-4. **Similar to Mainnet**: Sepolia closely mirrors the Ethereum mainnet in terms of functionality and behavior. This ensures that your tests are representative of how your application will perform on the mainnet.
+3. **Similar to Mainnet**: Sepolia closely mirrors the Ethereum mainnet in terms of functionality and behavior. This ensures that your tests are representative of how your application will perform on the mainnet.
 
 
 ### IDE: Remix

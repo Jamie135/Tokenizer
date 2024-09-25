@@ -14,11 +14,12 @@ contract CrossGuild is ERC20, Ownable {
         CROWN
     }
 
+    // Initialize the initial supply of the token to ten thousand and the maximum bounty to five thousand
     uint256 public initialSupply = 10000 * 10 ** 18;
     uint256 public constant maxBounty = 5000 * 10 ** 18;
 
     // Constructor that initializes the token with the name "42Berry", symbol "42B"
-    // It sets the initial amount of tokens to 1 million
+    // It sets the contract owner amount of tokens to initialSupply
     // It also sets the sender address to be the owner of the contract
     constructor() ERC20("42Berry", "42B") Ownable(msg.sender) {
         _mint(msg.sender, initialSupply);

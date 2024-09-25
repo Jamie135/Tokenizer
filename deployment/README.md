@@ -22,8 +22,8 @@ Follow these steps to deploy the contract for the first time:
    - In the file explorer, upload `42Berry.sol` file located in the `code` folder of this repository.
 
 3. **Compile the Contract:**
-   - Click on the `Solidity Compiler` tab on the left sidebar.
-   - Choose the appropriate compiler version if necessary.
+   - Click on the `Solidity compiler` tab on the left sidebar.
+   - Choose the appropriate compiler in `Advanced Configurations`.
    - Click `Compile 42Berry.sol`.
 
 4. **Deploy the Contract:**
@@ -37,7 +37,7 @@ Follow these steps to deploy the contract for the first time:
 
 6. **Contract Deployed:**
    - After confirming the transaction, the contract will be deployed and visible under the `Deployed Contracts` section.
-   - Copy its address, you will be able to load this contract by pasting the address to the `At Address` field
+   - Save its address, you will be able to load this contract again somewhere else by entering the address to the `At Address` field (or just copy my deployed address above).
 
 ---
 
