@@ -1,6 +1,6 @@
 # Tokenizer: 42Berry
 
-This project involves creating and deploying a personal token called 42Berry.
+This project focuses on the creation and deployment of a personal token named 42Berry. It demonstrates some simple functionalities such as minting, burning, and transferring tokens within a bounty system.
 
 ## Project Implementation
 

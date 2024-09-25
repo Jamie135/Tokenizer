@@ -4,7 +4,7 @@ This guide provides instructions on how to deploy and interact with the smart co
 
 ## Contract Address
 ```
-0xC341Ae4d736087338a7B24F326a8A031DD4Cf00f
+0x7B5269f932A381B4CB034A7ECf160E77271D1528
 ```
 
 ## Required Setups
@@ -37,6 +37,7 @@ Follow these steps to deploy the contract for the first time:
 
 6. **Contract Deployed:**
    - After confirming the transaction, the contract will be deployed and visible under the `Deployed Contracts` section.
+   - Copy its address, you will be able to load this contract by pasting the address to the `At Address` field
 
 ---
 

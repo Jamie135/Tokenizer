@@ -51,6 +51,20 @@ The contract uses OpenZeppelin libraries to ensure security, reliability, and si
 - **ERC20**: Provides the standard ERC20 functionality for fungible tokens.
 - **Ownable**: Allows for ownership management, restricting certain functions to the owner of the contract.
 
+### Rank Mapping:
+
+The contract initializes two ranks:
+- STAR(mapped to 0)
+- CROWN(mapped to 1)
+These ranks will determine the scale of the bounty to increase or decrease.
+
+```solidity
+enum Rank {
+    STAR,
+    CROWN
+}
+```
+
 ### Constructor:
 
 The contract's constructor initializes the ERC20 token with:
@@ -60,10 +74,11 @@ The contract's constructor initializes the ERC20 token with:
 - The contract also call the `_mint()` method from OpenZeppelin to mint `initialSupply` amount of tokens for the the contract owner
 
 ```solidity
-uint256 initialSupply = 1000000;
+uint256 public initialSupply = 10000 * 10 ** 18;
+uint256 public constant maxBounty = 5000 * 10 ** 18;
 
 constructor() ERC20("42Berry", "42B") Ownable(msg.sender) {
-    _mint(msg.sender, initialSupply * 10 ** decimals());
+    _mint(msg.sender, initialSupply);
 }
 ```
 
@@ -75,13 +90,13 @@ This function allows the contract owner to increase (mint) new tokens and assign
 The amount of minted tokens will depends on the target's rank and tier.
 
 ```solidity
-function increaseBounty(address account, string memory rank, uint256 tier) public onlyOwner {
+function increaseBounty(address account, Rank rank, uint256 tier) public onlyOwner {
     require(account != owner(), "Cannot increase bounty for the owner");
     require(tier >= 1 && tier <= 5, "Invalid tier");
 
     uint256 amount = calculateAmount(rank, tier);
-    require(balanceOf(account) + amount * 10 ** decimals() <= 5000 * 10 ** decimals(), "Account bounty too high");
-    _mint(account, amount * 10 ** decimals());
+    require(balanceOf(account) + amount <= maxBounty, "Account bounty too high");
+    _mint(account, amount);
 }
 ```
 
@@ -91,13 +106,13 @@ This function allows the contract owner to decrease (burn) a specified amount of
 The amount of burned tokens will depends on the target's rank and tier.
 
 ```solidity
-function decreaseBounty(address account, string memory rank, uint256 tier) public onlyOwner {
+function decreaseBounty(address account, Rank rank, uint256 tier) public onlyOwner {
     require(account != owner(), "Cannot decrease bounty for the owner");
     require(tier >= 1 && tier <= 5, "Invalid tier");
 
     uint256 amount = calculateAmount(rank, tier);
-    require(balanceOf(account) >= amount * 10 ** decimals(), "Account bounty too low");
-    _burn(account, amount * 10 ** decimals());
+    require(balanceOf(account) >= amount, "Account bounty too low");
+    _burn(account, amount);
 }
 ```
 
@@ -108,10 +123,12 @@ This function allows the contract owner to transfer tokens from his account to t
 ```solidity
 function claimBounty(address claimer, address captured) public onlyOwner {
     require(claimer != owner() && captured != owner(), "The owner cannot claim or be captured");
-    require(totalSupply() >= balanceOf(captured), "Insufficient total supply");
+    
+    uint256 capturedBalance = balanceOf(captured);
+    require(totalSupply() >= capturedBalance, "Insufficient total supply");
 
-    _transfer(msg.sender, claimer, balanceOf(captured));
-    _burn(captured, balanceOf(captured));
+    _transfer(msg.sender, claimer, capturedBalance);
+    _burn(captured, capturedBalance);
 }
 ```
 
@@ -121,11 +138,12 @@ This function allows the contract owner to get repaid his claimed tokens plus ad
 
 ```solidity
 function negotiateHostage() public onlyOwner {
-    uint256 currentSupply = initialSupply * 10 ** decimals();
+    uint256 currentSupply = initialSupply;
     require(currentSupply > balanceOf(msg.sender), "No bounty has been claimed yet!");
-    uint256 amount = currentSupply - balanceOf(msg.sender) + (100 * 10 ** decimals());
+    
+    uint256 amount = currentSupply - balanceOf(msg.sender) + (100 * 10 ** 18);
     _mint(msg.sender, amount);
-    initialSupply = balanceOf(msg.sender) / (10 ** decimals());
+    initialSupply = balanceOf(msg.sender);
 }
 ```
 
@@ -134,14 +152,14 @@ function negotiateHostage() public onlyOwner {
 This function calculates the amount of token based on the rank and the tier of the target.
 
 ```solidity
-function calculateAmount(string memory rank, uint256 tier) internal pure returns (uint256) {
+function calculateAmount(Rank rank, uint256 tier) internal pure returns (uint256) {
     uint256 baseAmount = 0;
-    if (keccak256(abi.encodePacked(rank)) == keccak256(abi.encodePacked("star"))) {
+    if (rank == Rank.STAR) {
         baseAmount = 100;
-    } else if (keccak256(abi.encodePacked(rank)) == keccak256(abi.encodePacked("crown"))) {
+    } else if (rank == Rank.CROWN) {
         baseAmount = 1000;
     }
-    return baseAmount * tier;
+    return baseAmount * tier * 10 ** 18;
 }
 ```
 
