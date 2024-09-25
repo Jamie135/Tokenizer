@@ -14,7 +14,7 @@ contract CrossGuild is ERC20, Ownable {
         CROWN
     }
 
-    // Initialize the initial supply of the token to ten thousand and the maximum bounty to five thousand
+    // Initialize the initial supply of the token to ten thousands and the maximum bounty to five thousands
     uint256 public initialSupply = 10000 * 10 ** 18;
     uint256 public constant maxBounty = 5000 * 10 ** 18;
 
