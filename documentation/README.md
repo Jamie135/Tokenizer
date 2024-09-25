@@ -53,10 +53,10 @@ The contract uses OpenZeppelin libraries to ensure security, reliability, and si
 
 ### Rank Mapping:
 
-The contract initializes two ranks:
-- STAR(mapped to 0)
-- CROWN(mapped to 1)
-These ranks will determine the scale of the bounty to increase or decrease.
+The rank will determine the scale of the bounty to increase or decrease, the contract will map them to an integer:
+
+- STAR (mapped to 0)
+- CROWN (mapped to 1)
 
 ```solidity
 enum Rank {
